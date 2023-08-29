@@ -1,8 +1,10 @@
 pipeline {
   agent any 
      stages {
-       stage('clone'){
-         checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Naveentech1999/sample.git']])
+       stage ('clone'){
+         steps {
+             checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Naveentech1999/sample.git']])
        }
      }
+  }
 }
