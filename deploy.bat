@@ -1,11 +1,8 @@
 @echo off
 
-rem Set the git user name and email
-git config user.name %GIT_USERNAME%
-git config user.email %GIT_USERNAME%
-
+ 
 rem Define the ORIGIN variable
-set ORIGIN="https://%GIT_USERNAME%:%GIT_PASSWORD%@https://github.com/Naveentech1999/sample.git"
+set ORIGIN="https://github.com/Naveentech1999/sample.git"
 echo %ORIGIN%
 
 rem Temporarily disable the error-checking flag
