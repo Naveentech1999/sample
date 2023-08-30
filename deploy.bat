@@ -1,7 +1,7 @@
 @echo off
 
 rem Get the tag name from the environment variable
-set TAG=%1
+set TAG=DEV
 
 rem Delete the tag locally
 git tag -d %TAG%
