@@ -11,7 +11,7 @@ pipeline {
      }
         stage ('runscript') {
             steps {
-               withCredentials([string(credentialsId: 'TAG', variable: 'TAG')]) {
+                
                    bat 'deploy.bat'                    
                 }
             }
