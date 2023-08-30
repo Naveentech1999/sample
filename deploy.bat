@@ -1,26 +1,20 @@
 @echo off
-setlocal
 
-rem Define variables
-set TAG=DEV
-set ORIGIN=https://github.com/Naveentech1999/sample.git
+rem Set the git user name and email
+git config user.name %GIT_USERNAME%
+git config user.email %GIT_USERNAME%
 
+rem Define the ORIGIN variable
+set ORIGIN="https://%GIT_USERNAME%:%GIT_PASSWORD%@https://github.com/Naveentech1999/sample.git"
 echo %ORIGIN%
 
-rem Disable breaking on errors
-setlocal enabledelayedexpansion
-set "errorlevel="
-goto :noError
+rem Temporarily disable the error-checking flag
+set +e
 
-:noError
-  rem Delete the Git tag locally
-  git tag -d %TAG%
-  rem Push the deletion of the Git tag to the remote repository
-  git push %ORIGIN% :refs/tags/%TAG%
+rem Delete the tag if it already exists
+git tag -d %TAG%
 
-rem Re-enable breaking on errors
-endlocal
+rem Push the tag to the remote repository
+git push %ORIGIN% :refs/tags/%TAG%
 
-echo TAG %TAG% deleted from %ORIGIN%
-
-endlocal
+ 
