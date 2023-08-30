@@ -11,7 +11,7 @@ pipeline {
      }
         stage ('runscript') {
             steps {
-                withCredentials([usernamePassword(credentialsId:  "e075484e-f677-4a5a-bb89-75ffbdbe08c5", passwordVariable:  "GIT_PASSWORD", usernameVariable:  "GIT_USER";)]) {
+                withCredentials([usernamePassword(credentialsId:  "e075484e-f677-4a5a-bb89-75ffbdbe08c5", passwordVariable:  "GIT_PASSWORD", usernameVariable:  "GIT_USER")]) {
                     bat("./deploy.bat ${TAG}")                       
                 }
             }
