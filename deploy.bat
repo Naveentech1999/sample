@@ -12,8 +12,14 @@ set "BUILD_URL=%7"
 set "RELEASE_VERSION=%8"
 
 rem Define ORIGIN variable
-set "ORIGIN=https://github.com/Naveentech1999/sample.git
-echo %ORIGIN%
+set "ORIGIN=https://%GIT_USERNAME%:%GIT_PASSWORD%@https://github.com/Naveentech1999/sample.git"
+echo ORIGIN: %ORIGIN%
+
+rem Display the PATH variable for debugging
+echo PATH: %PATH%
+
+rem Display the location of the git executable for debugging
+where git
 
 rem Temporarily disable the error-checking flag
 set +e
