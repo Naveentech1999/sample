@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'jenkins-slave' }
+  agent { label 'jenkins-node' }
 
   stages {
     stage('Check if any jobs are running') {
