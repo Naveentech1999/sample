@@ -1,7 +1,9 @@
 def TAG = "DEV";
 
 pipeline {
-  agent any 
+    agent { label 'jenkins-node' }
+    
+    tools {nodejs "node 10.x"}
      stages {
        stage ('clone'){
          steps {
