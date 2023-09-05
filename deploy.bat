@@ -8,3 +8,4 @@ git tag -d %TAG%
 
 rem Delete the tag remotely
 git push origin :refs/tags/%TAG%
+  bjb
