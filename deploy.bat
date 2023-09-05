@@ -1,4 +1,3 @@
-@echo off
 
 rem Get the tag name from the environment variable
 set TAG=$(1)
