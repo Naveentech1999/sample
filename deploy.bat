@@ -1,4 +1,4 @@
-rem Get the tag name from the environment variable
+kjgkgkrem Get the tag name from the environment variable
 set TAG=$(1)
 
 rem Delete the tag locally
