@@ -1,11 +1,12 @@
 pipeline {
-  agent any 
-     stages {
+    agent { label 'jenkins-slave' }
+    
+    stages {
        stage ('clone'){
          steps {
              checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Naveentech1999/sample.git']])
              echo "Cloning..."
        }
+      }
      }
-     }
-}
+    }
