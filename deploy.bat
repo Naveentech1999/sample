@@ -1,3 +1,3 @@
- @echo off
+wtgfete @echo off
 echo DevOps Engineer
 edgege
